@@ -1,0 +1,186 @@
+/* Fondo blanco para toda la página (body y html) */
+html,
+body {
+  background-color: white !important;
+  color: black !important; /* Texto negro por defecto para contraste */
+  margin: 0;
+  padding: 0;
+}
+
+/* Remover cualquier tema oscuro heredado */
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: white !important; /* Ignora dark mode */
+    color: black !important;
+  }
+}
+
+/* Forzar placeholders a negro */
+input::placeholder,
+select::placeholder {
+  color: black !important;
+  opacity: 1; /* Máximo opaco, corregido de 2 */
+}
+
+/* Contenedor principal con fondo blanco explícito */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white; /* Blanco puro */
+  min-height: 100vh; /* Cubre toda la altura de la pantalla */
+  color: black; /* Asegura texto negro en contenedor */
+}
+
+/* Barra de navegación */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 5px;
+  color: black; /* Cambio: Texto negro en botones no activos */
+}
+
+.nav-button.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+.nav-button:hover {
+  color: black; /* Mantiene negro en hover */
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black; /* Asegura texto negro en input */
+  background-color: white;
+}
+
+.mic-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: black; /* Cambio: De #888 (gris) a negro */
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 24%;
+  color: black; /* Texto negro en selects */
+  background-color: white;
+}
+
+/* Lista de ofertas */
+.offers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offer-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white; /* Blanco en cards */
+  color: black; /* Texto negro general en cards */
+}
+
+.offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-title {
+  margin: 0;
+  color: black; /* Título negro */
+}
+
+.offer-price {
+  color: #9370DB;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.offer-description {
+  margin: 10px 0;
+  color: black; /* Cambio: De #555 (gris) a negro */
+}
+
+.offer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.offer-author {
+  color: black; /* Cambio: De #333 (gris oscuro) a negro */
+}
+
+.star-icon {
+  color: #FFD700;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.offer-category {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9em;
+}
+
+.offer-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  color: black; /* Texto negro en botón editar */
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
